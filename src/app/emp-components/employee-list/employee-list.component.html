@@ -1,0 +1,55 @@
+
+<div fxLayout="column" class="width-wrapper">
+    <div class="navbar">
+      <app-navbar fxFlex="100" (addEmpClicked)="handleAddData()"></app-navbar>
+    </div>
+    <div class="content">
+        <!-- <h4 class="headerTitle">Employee List </h4> -->
+        <div *ngIf="showCustomSpinner" class="fullHW" fxLayoutAlign="center center">
+            <div  class="customSpinner"></div>
+        </div>
+        <div *ngIf="!noDataPresent && !showCustomSpinner" class="scrollable-div" fxLayout="row wrap" fxLayoutAlign="start start" class="mat-elevation-z1">
+            <div fxLayout="row wrap" fxFlex=100 fxLayoutAlign="start start">
+                <mat-table fxFlex="100" [dataSource]="dataSource" >
+                    <ng-container *ngFor="let col of columnDetails;let i =index" matColumnDef="{{col.key}}">
+    
+                        <mat-header-cell *matHeaderCellDef class="headerTexts">
+                            {{col.title}}
+                        </mat-header-cell>
+    
+                        <mat-cell *matCellDef="let element; let j = index" class="cellTexts">
+    
+                            <span *ngIf="columnDetails[i].type == 'Number' ">
+                                {{ element[ columnDetails[i].key ] }}
+                            </span>
+    
+    
+                            <span *ngIf="columnDetails[i].type == 'Text' ">
+                                {{ element[ columnDetails[i].key ] }}
+                            </span>
+    
+                            <span *ngIf="columnDetails[i].type == 'Action'" fxLayoutGap="5px">
+                                <mat-icon style="width: 30px;cursor: pointer;" class="material-icons-outlined"
+                                    (click)="handleAction( 'edit', element )">
+                                    edit_note
+                                </mat-icon>
+    
+                                <mat-icon style="width: 30px;cursor: pointer;" class="material-icons-outlined"
+                                    (click)="handleAction( 'delete', element )">
+                                    delete
+                                </mat-icon>
+                            </span>
+                        </mat-cell>
+                    </ng-container>
+    
+                    <mat-header-row *matHeaderRowDef="columnHeaderName; sticky:true"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: columnHeaderName;"></mat-row>
+                </mat-table>
+            </div>
+        </div>
+        <div class="noDataFound" *ngIf="noDataPresent" fxLayoutAlign="center center">
+
+            <p>No Employee Data Present !!!</p>
+        </div>
+    </div>
+</div>

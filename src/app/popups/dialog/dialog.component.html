@@ -1,0 +1,17 @@
+<div *ngIf="dialogData.type == 'SUCCESS'" class="content-container" fxLayout="row">
+
+    <div fxFlex="100" class="message" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="5px">
+        <span class="material-icons success-logo">check_circle_outline</span>
+        <span class="msg">
+        {{dialogData.msg}}</span>
+    </div>
+</div>
+
+<div *ngIf="dialogData.type == 'FAIL'" class="content-container" fxLayout="row">
+
+    <div fxFlex="100" class="message" fxLayoutAlign="center center" fxLayout="column" fxLayoutGap="5px">
+        <span class="material-icons error-logo">check_circle_outline</span>
+        <span class="msg">
+        {{dialogData.msg}}</span>
+    </div>
+</div>

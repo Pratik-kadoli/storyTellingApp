@@ -1,0 +1,56 @@
+@import '../../../styles.scss';
+
+.employeeForm{
+    padding: 1em 0.250em;
+
+    .headerName{
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #000000; 
+        margin: 0% !important; 
+    }
+
+    .close {
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-size: 1.8em;
+    }
+
+    .divider{
+
+        width:100%;
+        margin: 1em 0em;
+        color: rgb(0, 0, 0);
+    }
+
+    .cancelButton{
+        border-radius: 5px;
+        color: black;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1em;
+        height: 2.5em;
+        width: 8.2em;
+    }
+    
+    .submitButton{
+       border-radius: 5px;
+       height: 2.5em;
+       font-family: 'PT Sans', sans-serif;
+       font-weight: bold;
+       font-size: 1em;
+       width: 8.2em;
+     }
+
+}
+
+.textMessage{
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000000; 
+    margin: 0% !important; 
+
+ }

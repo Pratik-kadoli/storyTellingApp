@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="navBar">
+        <app-navbar (menuClick)="pageChanged($event)"></app-navbar>
+    </div>
+    <div class="displayView">
+        <router-outlet></router-outlet>
+    </div>
+</div>

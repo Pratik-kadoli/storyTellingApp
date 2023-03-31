@@ -1,0 +1,55 @@
+
+@import '/src/styles.scss';
+
+.content-container{
+    margin: 8px 8px 8px 8px;
+  }
+
+
+  .closeIcon{
+    color:black;
+//    font-weight: bolder;
+    width: 100%;
+  }
+
+  .message{
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+  //  padding-left: 1em;
+  }
+
+   span.success{
+    font-size: 1.2em;
+    color: black;
+    font-weight: 500;
+   
+  }
+   span.msg{
+    font-size: 1.2em;
+    color: black;
+    font-weight: 500;
+    padding-left: 0.300em;
+    margin-bottom: 0.400em;
+  }
+   span.warning{
+  color:orange;
+  font-size: 40px;
+  }
+   span.msg-logo{
+  font-size: 40px;
+  color: red;
+  
+  }
+   span.success-logo{
+  color:green;
+  font-size: 45px;
+   padding-left: 0.060em;
+  }
+
+  span.error-logo{
+    color:red;
+    font-size: 45px;
+     padding-left: 0.060em;
+    }
+    
+  

@@ -1,0 +1,17 @@
+<mat-card class="navbar mat-elevation-z8" fxLayout="row" fxLayoutAlign="start center">
+    <div class="alignment" fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+        <div class="leftPanel" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="2em">
+            <h4 class="Ptitle" (click)="goToDashboard()">Story Telling App</h4>
+            <div class="menusBlock" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1em">
+                <button mat-button class="menusName" *ngFor="let menu of menus" (click)="menuClicked(menu)">{{menu.name}}</button>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="2em">
+            <mat-icon class="material-icons-outlined logoutCss" 
+            (click)="logout()">
+            logout
+        </mat-icon>
+        </div>
+       
+    </div>
+</mat-card>

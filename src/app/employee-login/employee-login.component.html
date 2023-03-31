@@ -1,0 +1,55 @@
+<div class="container" fxLayoutAlign="start center">
+ 
+  <div *ngIf="signUp" class="login-box">
+    <h1 class="AppTitle">Story Telling App</h1>
+    <h2>Login</h2>
+    <form #myForm="ngForm">
+      <div class="user-box">
+        <input type="email" name="email" [(ngModel)]="user.email">
+        <label>Email</label>
+      
+      </div>
+      <div class="user-box">
+        <input type="password" name="password" required="" [(ngModel)]="user.password">
+        <label>Password</label>
+      </div>
+      <a style="cursor: pointer;" (click)="onSubmit(0)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      <p class="errorText" *ngIf="errorText">{{errorText}}</p>
+      <p class="createAccount">Dont have an account, <strong (click)="switch()" style="cursor: pointer;"> Sign In. </strong></p>
+    </form>
+  </div>
+
+  <div *ngIf="!signUp" class="login-box">
+    <h2>Create Account</h2>
+    <form #myFormCreate="ngForm">
+      <div class="user-box">
+        <input type="text" name="name" required="" [(ngModel)]="user.name">
+        <label>Name</label>
+      </div>
+      <div class="user-box">
+        <input type="email" name="email" required="" [(ngModel)]="user.email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="password" required="" [(ngModel)]="user.password">
+        <label>Password</label>
+      </div>
+
+      <a style="cursor: pointer;" (click)="onSubmit(1)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Create
+      </a>
+      <p class="errorText" *ngIf="errorText">{{errorText}}</p>
+      <p class="createAccount">Already have an account, <strong (click)="switch()" style="cursor: pointer;"> Sign Up. </strong></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// popup settings
+.custom-dialog-container .mat-dialog-container {
+    border-radius: 10px; //.25em .25em .4em .4em
+    padding: 15px;
+    overflow-y: hidden;
+}
+
+.custom-dialog-container .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin: 0px !important;
+}
+
+//custom spinner 
+.customSpinner {
+    border: 18px solid #4dbef3;
+    border-top: 18px solid #0474a8;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: cSpin 1s linear infinite;
+}
+
+//media for spinner
+@keyframes cSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//  popup css 
+.confirm-dialog-container .mat-dialog-container {
+    border-radius: 12px; //.25em .25em .4em .4em
+    padding: 0px;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #1068cc !important;
+}
+::ng-deep .mat-menu-content .orgmenu .mat-menu-panel .cdk-overlay-pane{
+    padding: 0px !important;
+  }
