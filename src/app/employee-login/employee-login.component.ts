@@ -82,6 +82,7 @@ export class EmployeeLoginComponent implements OnInit {
 
   switch(){
     this.signUp = this.signUp ? false : true;
-    this.user = { email : '', password : '', name : ''}
+    this.user = { email : '', password : '', name : ''};
+    this.errorText = '';
   }
 }
