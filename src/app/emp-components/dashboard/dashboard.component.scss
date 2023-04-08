@@ -1,5 +1,42 @@
 .container{
     width: 100%;
     height: 100%;
-    background-color: #FFF;
+    // background-image: url(../../../assets/jpg_files/loginBg.jpg);
+    // background-repeat: no-repeat;
+    // background-size :cover;
+    background-color: rgba(0, 0, 0, 0.532);   
+    display: flex;
+    flex-direction: column;
+    .continueWatching{
+        display: flex;
+        flex-direction: column;
+        color: #FFF;
+        font-weight: 500;
+        padding-left: 1.5em;
+        padding-top: 1em;
+        .displayRow{
+            width: auto;
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+
+            .bookTitle{
+                width: auto;
+                font-size: 1.2em;
+            }
+        
+            button{
+                width: auto;
+                text-align: start;
+                background-color: rgb(255, 255, 255);
+                color: #000;
+                margin-bottom:0.6em;
+            }
+    
+        }
+        .continue{
+            font-weight: 500;
+        }
+    }
+
 }

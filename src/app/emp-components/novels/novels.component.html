@@ -1,3 +1,21 @@
 <div class="container">
-    <h1>Novels List</h1>
+
+    <div class="leftContainer">
+        <h1 style="font-weight: 500;">Novels :</h1>
+        <button mat-button color="primary" class="bookTitle" *ngFor="let book of books; let i=index" (click)="openBook(book)">
+           {{i+1}}) {{book.title}}
+        </button>
+    </div>
+    <div class="rightContainer">
+        <iframe
+            class="scribd_iframe_embed"
+            tabindex="0"
+            data-auto-height="true"
+            data-aspect-ratio="0.6846504559270516"
+            scrolling="no"
+            width="100%"
+            height="100%"
+            frameborder="0"
+        ></iframe>
+    </div>
 </div>

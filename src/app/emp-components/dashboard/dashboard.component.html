@@ -1,6 +1,10 @@
 <div class="container">
-    <h1>Dashboard</h1>
-    <div class="ListofStories">
-        
+    <div class="continueWatching">
+        <h1 class="continue">Continue Reading :</h1>
+        <div class="displayRow">
+            <button mat-button color="primary" class="bookTitle" *ngFor="let book of recentBooks; let i=index" (click)="openRecent(book)">
+                {{i+1}}) {{book.title}}  
+             </button>
+        </div>
     </div>
 </div>

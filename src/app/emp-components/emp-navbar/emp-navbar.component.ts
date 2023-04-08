@@ -13,6 +13,10 @@ export class EmpNavbarComponent implements OnInit {
 
   menus = [
     {
+      name: 'Dashboard',
+      path: 'dashboard' 
+    },
+    {
       name: 'Animes',
       path: 'animes' 
     },
@@ -23,7 +27,7 @@ export class EmpNavbarComponent implements OnInit {
     {
       name: 'Novels',
       path: 'novels' 
-    }
+    },
   ]
 
   constructor( public router : Router ) { }
