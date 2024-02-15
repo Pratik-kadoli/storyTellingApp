@@ -17,6 +17,7 @@ import { ConfirmationComponent } from './popups/confirmation/confirmation.compon
 import { AngularFireModule } from '@angular/fire/compat';
 import { firebaseConfig } from 'src/firebase-config';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { ApiServiceService } from './api-service.service';
 
 @NgModule({
   declarations: [
@@ -37,10 +38,23 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     FlexLayoutModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   providers: [ApiService],
   entryComponents : [AddEmployeeComponent,DialogComponent,ConfirmationComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(private apiService: ApiServiceService){
+    this.apiService.fetchData().subscribe(data => {
+      if (data.condition) {
+        // Import ConditionalModule dynamically if condition is met
+        import('./another-module/another-module.module').then((mod) => {
+          AppModule.imports.push(mod.AnotherModuleModule);
+        });
+      }
+    });
+  }
+  static imports: any[] = [];
+}
